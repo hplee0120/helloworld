@@ -2,7 +2,7 @@ name: run
 on:
   workflow_dispatch:
   schedule:
-    - cron: 48 23 * * *
+    - cron: 0 0 * * 7
 
 jobs:
   build:
