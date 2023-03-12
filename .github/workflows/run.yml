@@ -2,11 +2,11 @@ name: run
 on:
   workflow_dispatch:
   schedule:
-    - cron: 1 16 * * 1
+    - cron: 45 23 * * 1
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       
