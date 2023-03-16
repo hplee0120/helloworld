@@ -15,8 +15,6 @@ jobs:
           wget https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf -nv -O ./accelerated-domains.china.txt
           wget https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/apple.china.conf -nv -O ./apple.china.txt
           wget https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/google.china.conf -nv -O ./google.china.txt
-          wget https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml -nv -O ./clash/lan.txt
-          wget https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list -nv -O ./shadowrocket/lan.txt
           cat ./accelerated-domains.china.txt ./apple.china.txt ./google.china.txt | sort | uniq > ./clash/chinalist.txt
           sed -i 's/server=\// - DOMAIN-SUFFIX,/g;s/\/114.114.114.114//g' ./clash/chinalist.txt
           sed -i '1s/^/payload:\n/' ./clash/chinalist.txt
