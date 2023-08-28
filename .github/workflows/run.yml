@@ -18,8 +18,8 @@ jobs:
           cat ./accelerated-domains.china.txt ./apple.china.txt ./google.china.txt | sort | uniq > ./clash/chinalist.txt
           sed -i 's/server=\// - DOMAIN-SUFFIX,/g;s/\/114.114.114.114//g' ./clash/chinalist.txt
           sed -i '1s/^/payload:\n/' ./clash/chinalist.txt
-          cat ./accelerated-domains.china.txt ./apple.china.txt ./google.china.txt | sort | uniq > ./shadowrocket/chinalist.txt
-          sed -i 's/server=\//DOMAIN-SUFFIX,/g;s/\/114.114.114.114//g' ./shadowrocket/chinalist.txt
+          cat ./accelerated-domains.china.txt ./apple.china.txt ./google.china.txt | sort | uniq > ./shadowrocket/chinalist.list
+          sed -i 's/server=\//DOMAIN-SUFFIX,/g;s/\/114.114.114.114//g' ./shadowrocket/chinalist.list
           rm ./accelerated-domains.china.txt ./apple.china.txt ./google.china.txt
       - name: Commit file
         run: |
