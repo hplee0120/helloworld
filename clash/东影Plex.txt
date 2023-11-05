@@ -1,5 +1,0 @@
-payload:
- - DOMAIN,funmedia.10101.io
- - DOMAIN-SUFFIX,plex.direct
- - DOMAIN-SUFFIX,plex.tv
- - IP-CIDR,89.58.46.70/32,no-resolve
